@@ -32,7 +32,7 @@ function takeOutOrderType(){
    }
 }
 
-  async function confirmOrder() {
+  function confirmOrder() {
     validated = true;
     verifyDate();   
     var forms = document.querySelectorAll('.needs-validation')
