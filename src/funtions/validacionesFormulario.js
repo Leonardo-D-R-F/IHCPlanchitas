@@ -1,4 +1,4 @@
-
+alert("CARGO");
 function takeOutOrderType(){
    let  typeOrder = document.getElementById("typeOrder").value;
    if (typeOrder === "PARA MESA"){
