@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nuestro Menu</title>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+        
+        <link rel="stylesheet" href="../styles/style-nav.css" />
+        <!--<link rel="stylesheet" href="../styles/style-menu.css" />-->
+    </head>
+    <body>
+        <header>
+            <nav class="navbar-dark bg-dark">
+                <div class="row m-0">
+                  <div class="col-3">
+                    <a class="navbar-brand" href="#">
+                      <img src="../assets/logo.png" alt="" width="320" height="80" class="d-inline-block align-text-top">
+                    </a>
+                  </div>
+                  <div class="col-5" id="navbarNav">
+                    <nav class="navbar navbar-dark bg-dark pt-4" id="navbar">
+                        <ul class="nav nav-pills nav-fill">
+                          <li class="nav-item" id="inicio">
+                            <a class="nav-link text-white ps-5 pe-5" href="../screens/index.html" >Inicio</a>
+                          </li>
+                          <li class="nav-item" id="menu">
+                            <a class="nav-link text-white ps-5 pe-5 bg-danger" href="../screens/menu.html" >Nuestro Menu</a>
+                          </li>
+                          <li class="nav-item" id="historia">
+                            <a class="nav-link text-white ps-5 pe-5" href="#" >Historia</a>
+                          </li>
+                          <li class="nav-item" id="informacion">
+                            <a class="nav-link text-white ps-5 pe-5" href="../screens/informacion.html" >Informacion</a>
+                          </li>
+                        </ul>
+                    </nav>
+                  </div>
+                  <div class="col-2">
+                    <div class="d-flex flex-row-reverse">
+                      <div class="carrito" id="contenedor-carrito">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="d-flex flex-row-reverse">
+                      <div class="p-4">
+                        <button type="button" data-bs-toggle="offcanvas" class="btn btn-outline-success text-white ms-3 me-3 ps-5 pe-5 border border-0" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Iniciar Sesion</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+        </header>
+        
+        <div id="Body" style="display: block;" >
+
+        
+
+        <div class="container-fluid mt-3">
+            <div class="row">
+                <div class="col-sm-1 p-3 bg-white text-white">
+                    <ul class="nav flex-column position-fixed">
+                        <li class="nav-item bg-danger border-bottom d-flex justify-content-center">
+                          <a class="nav-link text-white h4 active" aria-current="page" href="#Platos">Platos</a>
+                        </li>
+                        <li class="nav-item bg-danger border-bottom d-flex justify-content-center">
+                          <a class="nav-link text-white h4" href="#Bebidas">Bebidas</a>
+                        </li>
+                        <li class="nav-item bg-danger border-bottom d-flex justify-content-center">
+                          <a class="nav-link text-white h4" href="#Postres">Postres</a>
+                        </li>
+                        <li class="nav-item bg-danger border-bottom d-flex justify-content-center">
+                          <a class="nav-link text-white h4" href="#Promos">Promos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-11 p-3 bg-white text-white">
+                    <div>
+                        <div class="bg-dark p-1 ps-5">
+                            <a name="Platos"></a>
+                            <h2>Platos</h2>
+                        </div>
+    
+                        <div class="col d-inline-flex">
+                            <div class="card text-center m-2 ms-5 me-4" style="width: 16rem;">
+                                <!--<div class="contenedor">
+                                    <figure>
+                                        <img src="../assets/imageMenu/pique.jpg" class="card-img-top" id="imagen1" alt="...">
+                                        <div class="capa">
+                                            <h3>SLee Dw</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, vero!</p>
+                                        </div>
+                                    </figure>
+                                </div>-->
+                                <img src="../assets/imageMenu/pique.jpg" class="card-img-top" id="imagen1" alt="...">
+                                
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" id="nombre1" style="text-align:center">Pique</h5>
+                                    <p class="card-text text-dark" id="precio1" style="text-align:center">35 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="boton1" onclick='cambiarModal(1)'>Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/charque.jpg" class="card-img-top" id="imagen2" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" id="nombre2" style="text-align:center">Charque</h5>
+                                    <p class="card-text text-dark" id="precio2" style="text-align:center">50 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="boton2" onclick='cambiarModal(2)'>Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/plachita1.jpg" class="card-img-top" id="imagen3" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" id="nombre3" style="text-align:center">Planchita</h5>
+                                    <p class="card-text text-dark" id="precio3" style="text-align:center">100 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="boton3" onclick='cambiarModal(3)'>Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div>
+                        <div class="bg-dark p-1 ps-5">
+                            <a name="Bebidas"></a>
+                            <h2>Bebidas</h2>
+                        </div>
+
+                        <div class="col d-inline-flex">
+                            <div class="card text-center m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/coca.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Coca cola</h5>
+                                    <p class="card-text text-dark" style="text-align:center">12 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/fanta.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Fanta</h5>
+                                    <p class="card-text text-dark" style="text-align:center">10 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center  m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/sprite.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Sprite</h5>
+                                    <p class="card-text text-dark" style="text-align:center">10 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center  m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/corona.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Corona</h5>
+                                    <p class="card-text text-dark" style="text-align:center">15 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center  m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/del_valle.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Del Valle</h5>
+                                    <p class="card-text text-dark" style="text-align:center">11 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center  m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/agua.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Agua vital</h5>
+                                    <p class="card-text text-dark" style="text-align:center">8 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="bg-dark p-1 ps-5">
+                            <a name="Postres"></a>
+                            <h2>Postres</h2>
+                        </div>
+
+                        <div class="col d-inline-flex">
+                            <div class="card text-center m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/postre-1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Queque de Naranja</h5>
+                                    <p class="card-text text-dark" style="text-align:center">5 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/pai.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Pay de Limon</h5>
+                                    <p class="card-text text-dark" style="text-align:center">7,50 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center  m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/torta.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Torta de Dulces</h5>
+                                    <p class="card-text text-dark" style="text-align:center">135 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center  m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/flan_a.PNG" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Flan de Leche</h5>
+                                    <p class="card-text text-dark" style="text-align:center">4 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center  m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/gelatina-2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Gelatina</h5>
+                                    <p class="card-text text-dark" style="text-align:center">3 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center  m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/flan.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Flan de Chocolate</h5>
+                                    <p class="card-text text-dark" style="text-align:center">4 Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="bg-dark p-1 ps-5">
+                            <a name="Promos"></a>
+                            <h2>Promos</h2>
+                        </div>
+
+                        <div class="col d-inline-flex">
+                            <div class="card text-center m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/plachita1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Nombre</h5>
+                                    <p class="card-text text-dark" style="text-align:center">Precio Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/plachita1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Nombre</h5>
+                                    <p class="card-text text-dark" style="text-align:center">Precio Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center  m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/plachita1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Nombre</h5>
+                                    <p class="card-text text-dark" style="text-align:center">Precio Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center  m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/plachita1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Nombre</h5>
+                                    <p class="card-text text-dark" style="text-align:center">Precio Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center  m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/plachita1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Nombre</h5>
+                                    <p class="card-text text-dark" style="text-align:center">Precio Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-inline-flex">
+                            <div class="card text-center  m-2 ms-5 me-4" style="width: 16rem;">
+                                <img src="../assets/imageMenu/plachita1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark" style="text-align:center">Nombre</h5>
+                                    <p class="card-text text-dark" style="text-align:center">Precio Bs</p>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--MODAL-->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Charque</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                            <div class="col-5 pt-4">
+                                <img id="imagenModal" src="https://firebasestorage.googleapis.com/v0/b/tienda-31379.appspot.com/o/charque.jpg?alt=media&token=aad00399-9165-4a58-94c6-e60b815dcc66" alt="" width="200px" height="120px">
+                                <!--<p class="text-center fs-5">Charque</p>-->
+                                <p class="fs-6" id="descripcionModal">Carne deshidratada premium, mote, papa, huevo, quesillo.</p>
+                                <p class="fs-6" id="precioModal">100 bs</p>
+                            </div>
+                        
+                        <div class="col-7 p-4">
+                            <div class="row">
+                                <div class="col-7">
+                                    <p class="fs-5">Tamaño</p>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          Medio
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <p class="form-check-label" for="flexRadioDefault2">
+                                          Entero
+                                        </p>
+                                      </div>    
+                                      <p class="fs-5">Porcion Extra</p>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                          Yuca
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                          Mote
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="col-5">
+                                    <p class="fs-5">Cantidad</p> 
+                                    <input type="number" style="
+                                        height: 25px;
+                                        width: 85px;">
+                                </div>
+                            </div>                                           
+                        </div>
+                    </div>  
+                </div>
+                <div class="">
+                    <div class="text-center p-3 ms-5 me-5">
+                        <!--Probando botones-->
+                        <a href="../screens/pedido.html" class="nav-link text-white bg-danger ps-0 pe-0 rounded-pill" onclick='guardar_localstorage()'>Confirmar Pedido</a>
+                        <!--<button type="submit" class="btn btn-danger ps-5 pe-5 fs-5" onclick='aniadirPedido()'>Confirmar Pedido</button>-->
+                    </div>
+                </div>
+
+              </div>
+            </div>
+        </div>
+    <!-- Login ====================-->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Iniciar Sesion</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Correo</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text"></div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Registrarme</label>
+                  </div>
+                  <button type="submit" class="btn btn-success">Aceptar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+     <!-- ---------------------====================-->
+    </body>
+    <footer class="bg-dark p-5">
+        <div class="icono text-white d-flex justify-content-center fs-1">
+          <i class="bi bi-facebook ms-5 me-5"></i>
+          <i class="bi bi-instagram ms-5 me-5"></i>
+          <i class="bi bi-youtube ms-5 me-5"></i>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../funtions/funciones.js"></script>
+    <script type="text/javascript" src="../funtions/funciones-nav.js"></script>
+    <script type="text/javascript" src="../funtions/script.js"></script>
+</html>

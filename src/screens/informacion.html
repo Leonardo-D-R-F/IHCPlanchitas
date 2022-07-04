@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Informacion</title>
+    <!--Estilos de Boostrap-->  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/style-nav.css" />
+    <!--MAPA-->
+    <link rel="stylesheet" type="text/css" href="../styles/styleMap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <script src="../funtions/map.js"></script>
+    
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-dark bg-dark">
+        <div class="row m-0">
+          <div class="col-3">
+            <a class="navbar-brand" href="#">
+              <img src="../assets/logo.png" alt="" width="320" height="80" class="d-inline-block align-text-top">
+            </a>
+          </div>
+          <div class="col-5" id="navbarNav">
+            <nav class="navbar navbar-dark bg-dark pt-4" id="navbar">
+              <ul class="nav nav-pills nav-fill">
+                <li class="nav-item" id="inicio">
+                  <a class="nav-link text-white ps-5 pe-5  " href="../screens/index.html" >Inicio</a>
+                </li>
+                <li class="nav-item" id="menu">
+                  <a class="nav-link text-white ps-5 pe-5" href="../screens/menu.html" >Nuestro Menu</a>
+                </li>
+                <li class="nav-item" id="historia">
+                  <a class="nav-link text-white ps-5 pe-5" href="#" >Historia</a>
+                </li>
+                <li class="nav-item" id="informacion">
+                  <a class="nav-link text-white ps-5 pe-5 bg-danger" href="../screens/informacion.html" >Informacion</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-2">
+            <div class="d-flex flex-row-reverse">
+              <div class="carrito" id="contenedor-carrito">
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="d-flex flex-row-reverse">
+              <div class="p-4">
+                <button type="button" data-bs-toggle="offcanvas" class="btn btn-outline-success text-white ms-3 me-3 ps-5 pe-5 border border-0" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Iniciar Sesion</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>   
+    </header>
+        <br>
+        <div class="container" style="text-align: center">
+            <div class="row">
+
+                <div class="col">
+                    
+                        <div class="d-flex justify-content-between" id="map"></div>
+                        <div id="ubi" style="background:#fF2727">
+                            <br>
+                            <p id="p-contenido">UBICACION</p>
+                            <p id="p-contenido">Lado Campo Ferial, Pacara #1714</p>
+                            <p id="p-contenido">Cochabamba</p>
+                        </div>
+                </div>
+
+                <div class="col">
+                    <div class="row justify-content-center">
+                        <div id = "iconCorreo" style="background:#ff2727">
+                            <br>
+                            <a href="">
+                                <img class="iconos" src="../assets/icon/correo.png" width="80px">
+                            </a>
+                            <p id="letraIcono" >reclamos@planchitas.com</p>
+                        </div>
+
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="row justify-content-center">
+                        <div id = "iconLlamada" style="background:#ff2727">
+                            <br>
+                            <a href="">
+                                <img class="iconos" src="../assets/icon/llamada.png" width="80px">
+                            </a>
+                            
+                            <p id="letraIcono" >+591 7699988</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <br>
+            <div class="row" id="miRowHorario">
+                <br>
+                <h5 style="color: white">HORARIOS</h5>
+                <p id="p-contenido"> Abierto ahora jueves10:00-20:30 </p>
+                <p id="p-contenido"> viernes 10:00-20:30 sábado 10:00-21:00 domingo 10:00-21:00 lunes 10:00-20:30 martes</p>
+                <p id="p-contenido"> 10:00-20:30 miércoles 10:00-20:30 </p>
+            </div>
+            <br>
+            <br>
+        </div>
+
+        
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+        
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Iniciar Sesion</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text"></div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Registrarme</label>
+              </div>
+              <button type="submit" class="btn btn-success">Aceptar</button>
+            </form>
+        </div>
+      </div>
+  </body>
+  <footer class="bg-dark p-5">
+    <div class="icono text-white d-flex justify-content-center fs-1">
+      <i class="bi bi-facebook ms-5 me-5"></i>
+      <i class="bi bi-instagram ms-5 me-5"></i>
+      <i class="bi bi-youtube ms-5 me-5"></i>
+    </div>
+  </footer>
+  <script type="text/javascript" src="../funtions/funciones-nav.js"></script>
+  
+</html>

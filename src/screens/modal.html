@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Platillo
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Charque</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                    <div class="col-5 pt-4">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/tienda-31379.appspot.com/o/charque.jpg?alt=media&token=aad00399-9165-4a58-94c6-e60b815dcc66" alt="" width="200px" height="120px">
+                        <p class="text-center fs-5">Charque</p>
+                        <p class="fs-6">Carne deshidratada premium, mote, papa, huevo, quesillo.</p>
+                    </div>
+                
+                <div class="col-7 p-4">
+                    <div class="row">
+                        <div class="col-7">
+                            <p class="fs-5">Tamaño</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Medio
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <p class="form-check-label" for="flexRadioDefault2">
+                                  Entero
+                                </p>
+                              </div>    
+                              <p class="fs-5">Porcion Extra</p>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Yuca
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                  Mote
+                                </label>
+                              </div>
+                        </div>
+                        <div class="col-5">
+                            <p class="fs-5">Cantidad</p> 
+                            <input type="number" style="
+                                height: 25px;
+                                width: 85px;"></div>
+                    </div>                                           
+                </div>
+            </div>  
+        </div>
+        <div class="">
+            <div class="text-center p-3">
+                <button type="button" class="btn btn-danger">Confirmar Pedido</button>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nuestro Menu</title>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+       <link rel="stylesheet" href="/src/styles/styleForm.css">
+       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+        <link rel="stylesheet" href="../styles/style-nav.css" />
+        <link rel="stylesheet" href="../styles/style-pedido.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar-dark bg-dark">
+                <div class="row m-0">
+                  <div class="col-3">
+                    <a class="navbar-brand" href="#">
+                      <img src="../assets/logo.png" alt="" width="320" height="80" class="d-inline-block align-text-top">
+                    </a>
+                  </div>
+                  <div class="col-5" id="navbarNav">
+                    <nav class="navbar navbar-dark bg-dark pt-4" id="navbar">
+                      <ul class="nav nav-pills nav-fill">
+                        <li class="nav-item" id="inicio">
+                          <a class="nav-link text-white ps-5 pe-5  " href="../screens/index.html" >Inicio</a>
+                        </li>
+                        <li class="nav-item" id="menu">
+                          <a class="nav-link text-white ps-5 pe-5 bg-danger" href="../screens/menu.html" >Nuestro Menu</a>
+                        </li>
+                        <li class="nav-item" id="historia">
+                          <a class="nav-link text-white ps-5 pe-5" href="#" >Historia</a>
+                        </li>
+                        <li class="nav-item" id="informacion">
+                          <a class="nav-link text-white ps-5 pe-5" href="../screens/informacion.html" >Informacion</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="col-2">
+                    <div class="d-flex flex-row-reverse">
+                      <div class="carrito" id="contenedor-carrito">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="d-flex flex-row-reverse">
+                      <div class="p-4">
+                        <button type="button" data-bs-toggle="offcanvas" class="btn btn-outline-success text-white ms-3 me-3 ps-5 pe-5 border border-0" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Iniciar Sesion</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Iniciar Sesion</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Correo</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Registrarme</label>
+                </div>
+                
+              </form>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-10 mx-auto mt-5 mb-5">
+
+          <div class="d-flex flex-row bg-dark">
+            <div class="col-sm-11">
+              <h4 class="text-white ps-5">Mi Pedido</h4>
+            </div>
+            <div class="col-sm-1">
+              <button type="button" class="btn btn-danger ms-3 mt-2 pt-0 pb-0" onclick="cancelarPedido()">Cancelar</button>
+            </div>
+          </div>
+
+          <div class="d-flex flex-row mt-4">
+
+            <div class="col-sm-8 contenedor1">
+              <div class="d-flex flex-row border-bottom mb-4">
+                <div class="col-sm-10">
+                  <h6 class="text-dark ps-5">Detalle del producto</h6>
+                </div>
+                <div class="col-sm-2">
+                  <h6 class="text-dark ">Precio</h6>
+                </div>
+              </div>
+
+              <div class="container" id="contedor-pedidos">
+                
+              </div>
+
+              <div class="d-flex flex-row border-top mt-4">
+                <div class="col-sm-10">
+                  <h6 class="text-dark ps-5">Total</h6>
+                </div>
+                <div class="col-sm-2">
+                  <h6 class="text-dark " id="precioTotal">Total del precio</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 contenedor2 ps-5">
+              
+              <div class="">
+                <h5 class="p-0">Contacto</h5>
+                <div class="bg-dark p-4">
+                  <form class="row g-3 needs-validation" novalidate>                    
+                    <div class="container paddingForm">
+                     <div class="row pt-4">
+                         <div class="">
+                             <label id="nombre" for="validationCustom01" class="form-label text-white">Nombre:</label>
+                         </div>
+                         <div class="">
+                             <input type="text" pattern="[a-zA-Z]{4}[a-zA-Z ]{0,46}" class="form-control" id="name" required>
+                             <div class="invalid-feedback">
+                                 El campo Nombre es requerido, el Nombre solo puede tener entre 4 a 50
+                     caracteres.
+                               </div>
+                         </div>
+                     </div>
+                     <div class="row pt-4">
+                         <div class="">
+                             <label for="validationCustom01" class="form-label text-white">Correo:</label>
+                         </div>
+                         <div class="">
+                             <input type="email" class="form-control text-white" id="email" required>
+                             <div class="invalid-feedback">
+                                 El campo Correo es requerido, el correo debe tener un formato valido de email (Ej:nombre@dominio).
+                               </div>
+                         </div>
+                     </div>
+                     <div class="row pt-4">
+                         <div class="">
+                             <label for="validationCustom01" aria-describedby="validateTelfFeedback" class="form-label text-white">Telf:</label>
+                         </div>
+                         <div class="">
+                             <input pattern="[0-9]{8}" type="text" class="form-control" id="telf" required>
+                             <div class="invalid-feedback" id="validateTelfFeedback">
+                                 El campo Telf es requerido, el Teléfono debe tener 8 numero.
+                               </div>
+                         </div>
+                     </div>
+                     <div class="row pt-4">
+                      <div class="col-6">
+                        <div class="">
+                          <label for="validationCustom01" class="form-label text-white">Fecha:</label>
+                      </div>
+                      <div class="">
+                          <input  type="date" class="styleDate " aria-describedby="validateDateFeedback" name="txtDate" id="txtDate">
+                          <div id="validateDateFeedback" class="invalid-feedback">
+                              El campo Fecha es requerido, El dia de reserva no pueden ser fines de semana.
+                            </div>
+                      </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="">
+                          <label for="validationCustom01" class="form-label text-white">Hora:</label>
+                      </div>
+                      <div class="">
+                          <select class="form-control form-select"  id="hour" aria-label=" select example" required>
+                              <option selected disabled value="">Seleccione un horario</option>
+                              <option value="08:00:00">8:00</option>
+                              <option value="09:00:00">9:00</option>
+                              <option value="10:00:00">10:00</option>
+                              <option value="11:00:00">11:00</option>
+                              <option value="12:00:00">12:00</option>
+                              <option value="13:00:00">13:00</option>
+                              <option value="14:00:00">14:00</option>
+                              <option value="15:00:00">15:00</option>
+                              <option value="16:00:00">16:00</option>
+                              <option value="17:00:00">17:00</option>
+                              <option value="18:00:00">18:00</option>
+                              <option value="19:00:00">19:00</option>
+                          </select>
+                          <div class="invalid-feedback">
+                              El campo Hora es requerido.
+                            </div>
+                      </div>
+                      </div>
+                     </div>
+                     <div class="row pt-4">
+                      <div class="col-6">
+                        <div class="" >
+                          <label for="validationCustom01" class="form-label text-white" >Tipo de pedido</label>
+                      </div>
+                      <div class="">
+                          <select class="form-control form-select"  id="typeOrder" aria-label=" select example" required>
+                              <option selected disabled value="">Seleccione aquí</option>
+                              <option value="PARA LLEVAR">Para llevar</option>
+                              <option value="PARA MESA">Para Mesa</option>
+                             
+                          </select>
+                          <div class="invalid-feedback">
+                              El campo Tipo de pedido es requerido.
+                            </div>
+                      </div>
+                      </div>
+                      <div class="col-6" id="containerAmountOfPeople">
+                        
+                      </div>
+                      
+                      
+                      
+                    
+                     
+                    </div>
+                    <div class="mt-4">
+                      <h5 class="text-white">Metodo de pago</h5>
+                      <div class="bg-dark text-white p-4">
+                        <form action="/action_page.php">
+                          <div class="form-check mb-2">
+                            
+                          </div>
+      
+                          <div class="form-check mb-2">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" name="remember"> Transferecncia bancaria
+                            </label>
+                          </div>
+                          <label class="m-0 p-0">POR FAVOR SOLICITAR QR DE PAGO POR WHATSAPP</label>
+                        </form>
+                      </div>
+                    </div>
+                   </form>
+                    
+                 </div>
+                   
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+
+          <div class="mb-3 mt-3 text-center">
+            <button id="registerButton" onclick="confirmOrder()" class="btn btn-danger text-white"
+                    >Confirmar Pedidio
+            </button>
+        </div>  
+        </div>
+      </div>
+  </body>
+  <footer class="bg-dark p-5">
+      <div class="icono text-white d-flex justify-content-center fs-1">
+        <i class="bi bi-facebook ms-5 me-5"></i>
+        <i class="bi bi-instagram ms-5 me-5"></i>
+        <i class="bi bi-youtube ms-5 me-5"></i>
+      </div>
+  </footer>
+  <script type="text/javascript" src="../funtions/funciones-nav.js"></script>
+  <script type="text/javascript" src="../funtions/funciones-pedido.js"></script>
+  <script src="/src/funtions/validacionesFormulario.js"></script>
+</html>

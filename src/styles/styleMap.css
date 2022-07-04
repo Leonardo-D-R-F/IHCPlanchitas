@@ -1,0 +1,60 @@
+#map {
+    height: 300px;
+    width: 80%;
+    /*left:55px;*/
+    margin: 0 auto;
+    position: relative;
+    margin-left:10%;
+    border-radius: 10px;
+    border-top-style: double;
+    border-right-style: double;
+    border-bottom-style: double;
+    border-left-style: double;
+    
+}
+#ubi {
+    border-radius: 10px;
+    height: 100px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    margin-left:10%;
+}
+#p-contenido{
+    color: white;
+    text-align: center;
+    line-height: 50%;
+}
+#miRowHorario{
+    border-radius: 10px;
+    background:#ff2727;   
+}
+
+#iconCorreo{
+    border-radius: 10px;
+    width: 37%;
+    height: 37%;
+    background:#ffffff";
+}
+#iconLlamada{
+    border-radius: 10px;
+    width: 37%;
+    height: 37%;
+    background:#ffffff";
+}
+
+#letraIcono{
+    color: rgb(255, 255, 255);
+}
+.iconos{
+    filter: invert(100%) sepia(0%) 
+    saturate(7475%) hue-rotate(66deg)
+    brightness(108%) contrast(98%);
+}
+
+
+/*#iconLlamada a:hover {
+    background: #ffffff;
+    text-transform: uppercase;
+    transition: 1s;
+}*/
