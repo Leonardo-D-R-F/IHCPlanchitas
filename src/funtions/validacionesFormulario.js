@@ -1,23 +1,3 @@
-document.getElementById("name").addEventListener("input", (event) => {
-  let value = event.target.value;
-  event.target.value = value.replace(/[^A-Za-z ]/g, "").trimStart();
-});
-document.getElementById("telf").addEventListener("input", (event) => {
-  let value = event.target.value;
-  event.target.value = value.replace(/[^0-9]/g, "");
-});
-document.getElementById("email").addEventListener("input", (event) => {
-  let value = event.target.value;
-  event.target.value = value.replace(/[^A-Za-z0-9_.@]/g, "").trimStart();
-  
-});
-document.getElementById("txtDate").addEventListener("input", () => {
-  verifyDate();
-});
-
-document.getElementById("typeOrder").addEventListener("input", () => {
-  takeOutOrderType();
-});
 
 function takeOutOrderType(){
    let  typeOrder = document.getElementById("typeOrder").value;
